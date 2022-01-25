@@ -47,7 +47,7 @@ features_zh:
 - LED：1个，LD2（黄色，PA5）
 pkg_type: Board_Support_Packages
 pkg_vendor: RealThread
-pkg_version: 1.0.0
+pkg_version: 1.0.1
 template_projects:
 - builtin_files:
   - files_and_folders:
@@ -70,7 +70,6 @@ template_projects:
     - project.uvprojx
     - README.md
     - README_zh.md
-    - rt-thread
     - rtconfig.h
     - rtconfig.py
     - rtconfig_preinc.h
@@ -80,9 +79,25 @@ template_projects:
     - template.eww
     - template.uvoptx
     - template.uvprojx
-    source_path_offset: project_0
+    source_path_offset: rtt_default_project
     target_path_offset: ''
-  external_files: []
+  external_files:
+  - files_and_folders:
+    - components
+    - include
+    - libcpu/arm
+    - libcpu/Kconfig
+    - libcpu/SConscript
+    - src
+    - tools
+    - Kconfig
+    - LICENSE
+    package_name: RT-Thread
+    package_type: RT-Thread_Source_Code
+    package_vendor: ''
+    package_version: latest
+    source_path_offset: rt-thread
+    target_path_offset: rt-thread
   project_description: ''
   project_name: stm32g431
   project_type: rt-thread|@full|@latest
